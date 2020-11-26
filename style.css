@@ -57,7 +57,7 @@ body{
     /* margin-left: 48.5%; */
     margin-top: 63px;
     transition: all 1s;
-    text-align: end;
+    text-align: center;
     display: none;
 }
 .header .menu ul {

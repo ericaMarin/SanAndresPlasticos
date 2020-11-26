@@ -53,9 +53,9 @@ body{
 .header .menu {
     position: absolute;
     background-color: var(--background-header);
-    width: 42%;
-    margin-left: 56%;
-    margin-top: 54px;
+    width: 50%;
+    margin-left: 48.5%;
+    margin-top: 58.5px;
     transition: all 1s;
     text-align: end;
     display: none;
@@ -65,6 +65,7 @@ body{
 }
 .header .menu ul li {
     border-top: .5px solid rgb(114, 112, 112);
+    padding: 0 10px;
 }
 #btn-menu:checked~.menu {
     display: block;

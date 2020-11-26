@@ -58,6 +58,7 @@ body{
     margin-top: 54px;
     transition: all 1s;
     text-align: end;
+    display: none;
 }
 .header .menu ul {
     flex-direction: column;
@@ -66,8 +67,7 @@ body{
     border-top: .5px solid rgb(114, 112, 112);
 }
 #btn-menu:checked~.menu {
-    margin-left: 100%;
-    display: none;
+    display: block;
 }
 /* IMÁGEN PRINCIPAL */
 .principal-txt .title{
@@ -138,7 +138,7 @@ body{
 .quienesSomos{
     text-align: center;
     padding: 10px;
-    line-height: 19px;
+    line-height: 24px;
     background: var(--background-qhacemos);
 }
 .title-info{
@@ -214,7 +214,7 @@ body{
 }
 .plasticos-card{
     display: grid;
-    grid-template-rows: 160px 30px 150px;
+    grid-template-rows: 160px 30px 170px;
     row-gap: 3px;
 }
 
@@ -228,6 +228,9 @@ body{
 }
 .plasticos-descripcion{
     font-size: 15px;
+}
+.polipropileno{
+    margin-top: 20px;
 }
 .titulos{
     font-size: 22px;

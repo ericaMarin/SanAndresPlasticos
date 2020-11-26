@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo-solo-blanco.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Plasticos San Andres</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <figure class="logo">
-            <img src="img/logo2.png" alt="">
+            <img src="img/logo-blanco.png" alt="">
         </figure>
-        <nav>
-            <li><a href="#quienesSomos">Quienes Somos</a></li>
-            <li><a href="#productos">Nuestros Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </nav>
+        <input type="checkbox" class="check" id="btn-menu">
+        <label for="btn-menu" class="btn-menu">
+            <i class="fas fa-bars hamburger-menu"></i>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="#quienesSomos">Quienes Somos</a></li>
+                <li><a href="#productos">Nuestros Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav> 
     </header>
-    <!-- <figure class="principal-img">
+    <!-- <figure class="principal-txt">
         <p class="title">Somos <span>Plásticos San Andrés</span> una empresa con 30 años de experiencia en la fabricación de <span> caños de alto impacto</span>
      </p>
-     </figure> -->
+     </figure>  -->
      <div class="eslogan">
          <p class="title-principal animation-up">Bienvenido a Plásticos San Andrés</p>
         <p class="title animation-up"> Una empresa con 30 años de experiencia en la fabricación de <span> caños de plástico</span></p>
@@ -29,7 +36,7 @@
     <main>
         <section class="quienesSomos" id="quienesSomos">
             <p class="title-info titulos">Quienes Somos</p>
-            <p>Somos Plásticos San Andrés una empresa con 30 años de experiencia en la fabricación de caños de alto impacto. Gracias a nuestras políticas de mejoramiento continuo, estamos siempre atentos a las recomendaciones y sugerencias de quienes nos consultan.</p>
+            <p>Somos Plásticos San Andrés una empresa con 30 años de experiencia en la fabricación de caños de plástico. Gracias a nuestras políticas de mejoramiento continuo, estamos siempre atentos a las recomendaciones y sugerencias de quienes nos consultan.</p>
             <p>En nuestra fábrica de caños contamos con un equipo de trabajo especializado, el cual está capacitado para brindarle una buena asesoría. Conózcanos, somos reconocidos por la dedicación y el cuidado de los pequeños detalles como algo fundamental para conseguir caños de la mejor calidad.</p>
         </section>
         <article class="slider">
@@ -42,13 +49,15 @@
         </article>
         <div class="container-queHacemos">
             <section class="queHacemos">
-                <p class=" titulos">Que hacemos</p>
-                <p>En nuestra fábrica Plásticos San Andrés ponemos a su disposición una gran variedad de:</p>
+                <p class="titulos">Que hacemos</p>
+                <div class="txt-que-hacemos">
+                    <p>En nuestra fábrica Plásticos San Andrés ponemos a su disposición una gran variedad de:</p>
                 <ul>
                     <li>Caños de alto impacto</li>
                     <li>Caños de polietileno</li>
                     <li>Caños de polipropileno</li>
                 </ul>
+                </div>
             </section>
             <section class="plasticos">
                 <div class="plasticos-card">
@@ -74,7 +83,7 @@
                 </div>
             </section>
         </div>
-       <div class="container-productos" id="productos">
+       <!-- <div class="container-productos" id="productos">
         <p class="titulos">Nuestros Productos</p>
         <div class="productos">
             <div class="cards-productos">
@@ -93,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="productos">
+        <div class="productos">
             <div class="cards-productos">
                 <div class="div-productos foto4">
                     <p>Caños de alto impacto para la fabricación de lanza aguas</p>
@@ -109,15 +118,15 @@
                     <p>Todo tipo de diámetros de caños para la fabricación de caños de alto impacto, polipropileno, alta densidad y baja densidad</p>
                 </div>
             </div>
-        </div> -->
-       </div>
+        </div> 
+       </div> -->
     </main>
     <div class="container-contacto" id="contacto">
         <p class="titulos">Contacto</p>
     <div class="contacto">
         <div class="img-principal">
             <div class="txt-img-principal">
-                <!-- <p>Comunicate con nosotros</p> -->
+                <p>Comunicate con nosotros</p> 
             <form action="" method="get">
                 <input class="campos" type="text" placeholder="Nombre" name="nombre" id="">
                 <input class="campos" type="text" placeholder="Apellido" name="apellido" id="">
@@ -134,6 +143,6 @@
     </div>
     <footer>
         
-    </footer>
+    </footer> 
 </body>
 </html>

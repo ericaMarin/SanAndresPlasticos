@@ -1,20 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Play:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 :root{
-    --font: 'Lato', sans-serif;
-    --font2:'Barlow Semi Condensed', sans-serif;
+    --background-header:  #031c2a;
+    --font: 'Quicksand', sans-serif;
+   --background-eslogan:  #020c11b4; /* radial-gradient( rgba(255, 255, 255, .4) , #0c1318 ); */
+    --background-qhacemos: #ffffff;
+    --font-white: #ffffff;
+    --font-black: #000000;
 }
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 body{
-    font-family: var(--font);
-    background-image: url(img/fondotubos1.jpg);
-    background-attachment: fixed;
+    background-image: url(./img/fondotubos1.jpg); 
     background-repeat: no-repeat;
-    background-size: cover;
+    font-family: var(--font);
+    background-attachment: fixed;
+}
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-header);
+    padding: 5px;
+}
+.header .logo img{
+    width: 120px;
+}
+.header .btn-menu{
+    padding: 10px;
+}
+.header .btn-menu .hamburger-menu{
+    font-size: 23px;
+    color: white;
+    padding-top: 7px;
+}
+.check{
+    display: none;
+}
+.header nav li{
+    list-style: none;
+    padding: 3px;
+}
+.header nav li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.header label {
+    display: block;
+}
+.header .menu {
+    position: absolute;
+    background-color: var(--background-header);
+    width: 42%;
+    margin-left: 56%;
+    margin-top: 54px;
+    transition: all 1s;
+    text-align: end;
+}
+.header .menu ul {
+    flex-direction: column;
+}
+.header .menu ul li {
+    border-top: .5px solid rgb(114, 112, 112);
+}
+#btn-menu:checked~.menu {
+    margin-left: 100%;
+    display: none;
+}
+/* IMÁGEN PRINCIPAL */
+.principal-txt .title{
+    text-align: center;
+}
+.eslogan{
+    padding-top: 150px;
+    width: 100%;
+    height: 258px;
+    background: var(--background-eslogan);
+    text-align: center;
 }
 .animation-up{
     animation: up 2s ;
@@ -29,69 +93,19 @@ body{
         margin-top: 0;
     }
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-    background: rgb(201, 198, 198);
-    /* border-bottom: 1px solid rgb(153, 151, 151); */
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 45;
-}
-nav{
-    display: flex;
-    align-items: center;
-}
-nav li{
-    list-style: none;
-    padding: 0 15px;
-}
-nav li a{
-    text-decoration: none;
-    color: black;
-    font-family: var(--font2);
-}
-.logo{
-    height: 80px;
-}
-.logo img{
-    width: 230px;
-    margin-top: 5px;
-}
 .title-principal{
-    font-size: 49px;
+    font-size: 22px;
     font-weight: 700;
+    color: var(--font-white);
 }
 .title{
-    margin-bottom: 10px;
-    font-size: 39px;
-    color: rgb(0, 0, 0);
-    font-family: var(--font2);
+    font-size: 17px;
+    color: var(--font-white);
 }
-.eslogan{
-    padding-top: 250px;
-    width: 100%;
-    height: 680px;
-    background: radial-gradient( rgba(255, 255, 255, .4) , rgb(212, 210, 210) );
-    text-align: center;
-}
-/*        QUIENES SOMOS        */
-.quienesSomos{
-    padding:  40px 100px; 
-    background: rgb(229, 226, 226);
-    text-align: center;
-}
-.quienesSomos p{
-    font-size: 23px;
-    margin: 10px 0;
-    line-height: 32px;
-}
-/*        SLIDER        */
+/* SLIDER */
 .slider{
     width: 100%;
-    height: 500px;
+    height: 200px;
     overflow: hidden;
 }
 .slider ul{
@@ -120,12 +134,23 @@ nav li a{
     width: 100%;
     height: 100%;
 }
+/*  QUIENES SOMOS  */
+.quienesSomos{
+    text-align: center;
+    padding: 10px;
+    line-height: 19px;
+    background: var(--background-qhacemos);
+}
+.title-info{
+    font-size: 18px;
+    margin: 8px;
+}
 /*      QUE HACEMOS      */
 .container-queHacemos{
-    background: rgb(229, 226, 226);
+    background: var(--background-qhacemos)
 }
 .queHacemos{
-    padding:  30px;
+    padding:  10px;
     font-size: 20px;
 }
 .principal-img{
@@ -158,7 +183,6 @@ nav li a{
 
 }
 .img-principal{
-    width: 100%;
     /* background-image: url(img/fotoPrincipal2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,12 +190,11 @@ nav li a{
     background-position:center center; */
     display: flex;
     justify-content: flex-start;
-    padding-left: 50px;
 }
 .txt-img-principal{
-    height: 380px;
+    height: 250px;
     color: rgb(0, 0, 0);
-    font-size: 28px;
+    font-size: 18px;
     margin-top: 50px;
     margin-bottom: 15px;
     margin-right: 100px;
@@ -180,55 +203,64 @@ nav li a{
 }
 .txt-img-principal>p{
     margin: 10px 0;
+    display: none;
 }
 .plasticos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     column-gap: 30px;
     padding: 40px;
     text-align: center;
 }
 .plasticos-card{
     display: grid;
-    grid-template-rows: 270px 30px 150px;
-    row-gap: 15px;
+    grid-template-rows: 160px 30px 150px;
+    row-gap: 3px;
 }
 
 .plasticos-img{  
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 }
 .plasticos-title{
-    font-size: 27px;
+    font-size: 18px;
     font-weight: 700;
 }
 .plasticos-descripcion{
-    font-size: 20px;
+    font-size: 15px;
 }
-
+.titulos{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.txt-que-hacemos{
+    font-size: 16px;
+}
+.txt-que-hacemos li{
+    margin-left: 25px;
+}
 /*       CONTACTO       */
 .container-contacto{
-    background: rgb(229, 226, 226);
+    background: var(--background-qhacemos);
     padding: 25px 13px;
 }
 .titulos{
     font-family: var(--font2);
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 39px !important;
-    margin: 30px !important;
+    font-size: 21px !important;
 }
 .contacto{
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 iframe{
     margin-top:35px;
 }
 .mapa{
-    width: 800px;
+    width: 100%;
     margin-right: 20px;
-    margin-top: 23;
     height: 375px;
 }
 h1{
@@ -241,19 +273,19 @@ form{
     align-items: center;
     /* margin-right: 100px;
     margin-top: 50px; */
-    width: 320px;
+    width: 220px;
 }
 form .campos{
     /* background: rgba(255, 255, 255, .6); */
     background: none;
-    width: 350px;
+    width: 300px;
     margin: 5px;
     border: none;
     border-bottom: .3px solid rgb(199, 192, 192);
     font-family: var(--font);
-    padding-top: 20px;
-    padding-left: 5px;
+    padding-top: 10px;
     transition: .5s;
+    margin-left: 80px;
 }
 form .campos:focus{
     padding: 0;
@@ -275,11 +307,11 @@ form .campos::placeholder .campos:focus{
 }
 
 form input{
-    height: 55px;
+    height: 23px;
 }
 form textarea{
-    height: 90px;
-    max-height: 100px;
+    height: 50px;
+    max-height: 700px;
     max-width: 350px;
 }
 form .button{
@@ -291,84 +323,5 @@ form .button{
     border-radius: 6px;
     margin-top: 10px;
     font-family: var(--font);
-}
-
-/*       PRODUCTOS       */
-.productos {
-    display: flex;
-    justify-content: space-around;
-}
-.container-productos{
-    background-image: url(img/fondo2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10px; 
-    background-color: white;
-    padding: 20px 100px;
-}
-.container-productos h1{
-    font-size: 38px;
-    margin: 20px 0 40px ;
-}
-.cards-productos {
-    text-align: center;
-    transition: all .8s;
-}
-.cards-productos div{
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    transition: all .8s;
-    border-radius: 50%;
-    margin: 20px 0;
-}
-/* .cards-productos figure img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
-    filter: brightness(.6);
-    transition: all .8s;
-} */
-/* .cards-productos div:hover{
-    width: 310px;
-    height: 310px;
-} */
-.cards-productos p{
-    font-size: 23px;
-    color: white;
-    opacity: 0;
-    transition: all .8s;   
-    padding: 130px 13px 180px 13px;
-}
-.cards-productos :hover p{
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.514);
-}
-.div-productos {
-    text-align: center;
-    cursor: pointer;
-}
-.div-productos{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.foto1{
-    background-image: url(img/cañoPropileno.jpeg);
-}
-.foto2{
-    background-image: url(img/cañoParaHulaHula.jpeg);
-}
-.foto3{
-    background-image: url(img/cañosDeAltoImpacto.jpeg);
-}
-.foto4{
-    background-image: url(img/cañoParaHulaHula.jpeg);
-}
-.foto5{
-    background-image: url(img/cañoPropileno.jpeg);
-}
-.foto6{
-    background-image: url(img/cañosDeAltoImpacto.jpeg);
+    margin-left: 90px;
 }

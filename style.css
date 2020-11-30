@@ -210,7 +210,7 @@ body{
 .txt-img-principal{
     color: rgb(0, 0, 0);
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 15px;
     margin-right: 100px;
     padding: 20px;
@@ -224,18 +224,19 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     column-gap: 30px;
-    padding: 40px;
+    padding: 25px 40px 0;
     text-align: center;
 }
 .plasticos-card{
     display: grid;
-    grid-template-rows: 160px 30px 170px;
-    row-gap: 3px;
+    grid-template-rows: 160px 30px 120px;
+    row-gap: 5px;
 }
 
 .plasticos-img{  
     width: 150px;
     height: 150px;
+    border-radius: 50%;
 }
 .plasticos-title{
     font-size: 18px;
@@ -256,6 +257,24 @@ body{
 .fa-chevron-right{
     color: var(--font-secondary);
     margin: 0 10px;
+}
+/*    PRODUCTOS    */
+.productos{
+    background: var(--background-qhacemos);
+    padding: 40px;
+    margin: 0 12px;
+    border-top:  .2px solid rgb(241, 237, 237);
+}
+.container-productos{
+    background: white;
+}
+.img-productos{
+    width: 90%;
+    height: 90%;
+}
+.container-cards-productos{
+    display: flex;
+    text-align: center;
 }
 /*       CONTACTO       */
 .container-contacto{
@@ -338,4 +357,19 @@ form .button{
 }
 form .button::focus{
     background: #87a3b4;
+}
+
+@media (min-width: 700px){
+    body{
+        background-size: cover;
+    }
+}
+footer{
+    width: 100%;
+    background: white;
+    padding: 40px 0px;
+    border-top: .2px solid rgb(241, 237, 237);
+}
+footer p{
+    text-align: center;
 }

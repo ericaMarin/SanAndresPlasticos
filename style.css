@@ -273,10 +273,65 @@ body{
     height: 110px;
     border-radius: 15px;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .container-cards-productos{
     display: flex;
-    text-align: center;
+    justify-content: space-around;
+}
+.container-cards-productos p{
+    color: white;
+    font-size: 13px;
+    opacity: 0;
+    transition: 1s;
+}
+.producto-1:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pp-rodillo-mini-termofusionado.jpg);
+}
+.producto-2:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/polietileno-alta-densidad-rodillos.jpg);
+}
+.producto-3:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pead-jugueteros.jpg);
+}
+.producto-4:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/baños.jpg);
+}
+.producto-5:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/aros-hula-hula.jpeg);
+}
+.producto-6:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pead-rodillos.jpg);
+}
+.producto-1{
+    background-image: url(img/pp-rodillo-mini-termofusionado.jpg);
+    background-size: cover;
+}
+.producto-2{
+    background-image: url(img/polietileno-alta-densidad-rodillos.jpg);
+    background-size: contain;
+}
+.producto-3{
+    background-image: url(img/pead-jugueteros.jpg);
+    background-size: cover;
+}
+.producto-4{
+    background-image: url(img/baños.jpg);
+    background-size: cover;
+}
+.producto-5{
+    background-image: url(img/aros-hula-hula.jpeg);
+    background-size: cover;
+}
+.producto-6{
+    background-image: url(img/pead-rodillos.jpg);
+    background-size: cover;
+}
+.cards-productos:hover .div-productos p{
+    opacity: 1;
 }
 /*       CONTACTO       */
 .container-contacto{
@@ -338,7 +393,7 @@ form .campos::placeholder .campos:focus{
 }
 
 form input{
-    height: 23px;
+    height: 30px;
 }
 form textarea{
     height: 50px;

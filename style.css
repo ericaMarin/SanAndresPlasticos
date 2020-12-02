@@ -274,17 +274,17 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: solid 2px black;
+    border: solid .5px black;
     margin: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .circulos-2{
-    width: 10px;
-    height: 10px;
+    width: 23px;
+    height: 23px;
     background: white;
-    border: 2px solid black;
+    border: .5px solid rgb(255, 255, 255);
     border-radius: 50%;
 }
 .color-1{

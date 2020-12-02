@@ -25,6 +25,10 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: var(--background-header);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 .header .logo img{
     width: 120px;
@@ -43,7 +47,6 @@ body{
 }
 .header nav li{
     list-style: none;
-    padding: 3px;
 }
 .header nav li a{
     text-decoration: none;
@@ -68,7 +71,7 @@ body{
 }
 .header .menu ul li {
     border-top: .5px solid rgb(114, 112, 112);
-    padding: 0 10px;
+    padding: 10px;
 }
 #btn-menu:checked~.menu {
     display: block;
@@ -163,7 +166,7 @@ body{
     background: var(--background-qhacemos)
 }
 .queHacemos{
-    padding:  10px;
+    padding:  15px;
     font-size: 20px;
 }
 .queHacemos li{
@@ -257,6 +260,67 @@ body{
 .fa-chevron-right{
     color: var(--font-secondary);
     margin: 0 10px;
+}
+.paletas{
+    margin-top: 50px;
+}
+.colores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circulos{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: solid 2px black;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circulos-2{
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.color-1{
+    background-color: yellow;
+}
+.color-2{
+    background-color: orange;
+}
+.color-3{
+    background-color: pink;
+}
+.color-4{
+    background-color: rgb(240, 96, 120);
+}
+.color-5{
+    background-color: red;
+}
+.color-6{
+    background-color: lightskyblue;
+}
+.color-7{
+    background-color: rgb(73, 167, 167);
+}
+.color-8{
+    background-color: Navy;
+}
+.color-9{
+    background-color: blue;
+}
+.color-10{
+    background-color: rgb(79, 29, 121);
+}
+.color-11{
+    background-color: rgb(192, 253, 70);
+}
+.color-12{
+    background-color: rgb(13, 71, 117);
 }
 /*    PRODUCTOS    */
 .productos{

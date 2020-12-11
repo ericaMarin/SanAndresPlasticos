@@ -13,6 +13,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     background-image: url(./img/fondotubos1.jpg); 
@@ -74,7 +75,7 @@ body{
     padding: 13px;
 }
 #btn-menu:checked~.menu {
-    display: block;
+    display: static;
 }
 /* IMÁGEN PRINCIPAL */
 .principal-txt .title{

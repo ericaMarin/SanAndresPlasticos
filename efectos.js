@@ -9,3 +9,24 @@ $(document).ready(function(){ //Hacia arriba
 	});
 	$('.ir-abajo').click(function(){ $('body,html').animate({ scrollTop:'1000px' },1000); });
   }
+
+  $(document).ready(function(){
+ 	desplazamiento();
+  });
+
+function desplazamiento() {
+	$('.btn-menu').click(function(){ 
+		$('.menu').slideToggle(700, 'linear');
+ 	})
+ }
+$(document).ready(function(){
+	tocarMenu();
+})
+
+ function tocarMenu() {
+	$('.link-menu').click(function(){
+		$('.menu').slideUp();
+	})	 
+ }
+
+  

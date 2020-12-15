@@ -78,17 +78,17 @@ body{
     display: initial;
 }
 /* FLECHA ARRIBA */
-.ir-arriba {
-	display:none;
-	padding:20px;
-	background:#024959;
-	font-size:20px;
-	color:#fff;
-	cursor:pointer;
-	position: fixed;
-	bottom:20px;
-	right:20px;
-}
+.ir-arriba{
+    display:none;
+    background-repeat:no-repeat;
+    font-size:20px;
+    color: var(--font-secondary);
+    cursor:pointer;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index:2;
+  }
 /* IMÁGEN PRINCIPAL */
 .principal-txt .title{
     text-align: center;

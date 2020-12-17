@@ -25,7 +25,7 @@ $(document).ready(function(){
 
  function tocarMenu() {
 	$('.link-menu').click(function(){
-		$('.menu').slideUp();
+		$('.menu').slideUp(500);
 	})	 
  }
 

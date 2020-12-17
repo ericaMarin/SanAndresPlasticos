@@ -161,12 +161,12 @@
         <div class="img-principal">
             <div class="txt-img-principal">
                 <p>Comunicate con nosotros</p> 
-            <form action="" method="get">
-                <input class="campos" type="text" placeholder="Nombre" name="nombre" id="nombre">
-                <input class="campos" type="text" placeholder="Apellido" name="apellido" id="apellido">
-                <input class="campos" type="email" placeholder="Email" name="email" id="email">
-                <textarea name="" class="campos" id="consulta" placeholder="Ingrese su consulta" cols="30" rows="10"></textarea>
-                <input type="button" class="button" id="enviar" value="Enviar">
+            <form action="enviar.php" method="POST" class="form_contact">
+                <input class="campos" type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                <input class="campos" type="text" placeholder="Apellido" name="apellido" id="apellido" required>
+                <input class="campos" type="email" placeholder="Email" name="email" id="email" required>
+                <textarea name="mensaje" class="campos" id="consulta" placeholder="Ingrese su consulta" cols="30" rows="10" required></textarea>
+                <input type="submit" class="button" id="enviar" value="Enviar">
             </form>
             </div>
         </div>

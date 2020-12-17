@@ -636,7 +636,8 @@ footer p{
         display: flex;
         position: relative;
         background: none;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding-right: 18px;
     }
     .header .menu ul li {
         border-top: none;

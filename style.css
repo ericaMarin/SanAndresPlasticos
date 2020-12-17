@@ -67,9 +67,9 @@ body{
     text-align: center;
     display: none;
 }
-.header .menu ul {
+/* .header .menu ul {
     flex-direction: column;
-}
+} */
 .header .menu ul li {
     border-top: .5px solid rgb(114, 112, 112);
     padding: 13px;
@@ -616,26 +616,39 @@ footer p{
     .eslogan{
         height: 520px;
     }
+    .header{
+        display: flex;
+        justify-content: space-around!important;
+        align-items: center;
+    }
+    .header .btn-menu .hamburger-menu{
+        display: none;
+    }
+    .header .menu {
+        margin-top: 0;
+        display: initial;
+        position: initial;
+    }
+    .header .btn-menu{
+        display: none;
+    }
+    .header .menu ul {
+        display: flex;
+        position: relative;
+        background: none;
+        flex-direction: row-reverse;
+    }
+    .header .menu ul li {
+        border-top: none;
+    }
+    .header .logo img{
+        width: 130px;
+    }
 }
 @media(min-width: 800px){
     .mapa{
         width: 395px;
     }
-    .header .btn-menu{
-        display: none;
-    }
-    .header .menu{
-        display: initial;
-    }
-    .header .menu ul{
-        flex-direction: row;
-    }
-    .header .menu ul li{
-        border: none;
-    }
-    .header .logo img{
-        width: 140px;
-    } 
     .slider{
         height: 360px;
     }
@@ -672,7 +685,8 @@ footer p{
     }
     .container-cards-productos{
         justify-content: space-around;
-        padding: 0 250px;
+        padding: 10px 250px;
+
     } 
     .eslogan{
         height: 590px;
@@ -685,6 +699,9 @@ footer p{
         font-size: 22px;
         line-height: 33px;
     }
+    .header .logo img{
+        width: 140px;
+    }
 }
 @media(min-width: 1000px){
     .mapa{
@@ -695,6 +712,9 @@ footer p{
     }
     .eslogan{
         height: 650px;
+    }
+    .margen{
+        margin: 0;
     }
 }
 @media(min-width: 1100px){

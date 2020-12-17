@@ -9,7 +9,7 @@ $(document).ready(function(){ //Hacia arriba
 	});
 	$('.ir-abajo').click(function(){ $('body,html').animate({ scrollTop:'1000px' },1000); });
   }
-
+  if (window.screen.width <= 720){
   $(document).ready(function(){
  	desplazamiento();
   });
@@ -28,5 +28,5 @@ $(document).ready(function(){
 		$('.menu').slideUp(500);
 	})	 
  }
-
+}
   

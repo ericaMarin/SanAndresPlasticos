@@ -233,10 +233,6 @@ body{
     padding: 20px;
     text-align: center;
 }
-.txt-img-principal>p{
-    margin: 10px 0;
-    display: none;
-}
 .plasticos{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -508,7 +504,27 @@ form .button{
 form .button::focus{
     background: #87a3b4;
 }
-
+.exito{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: green;
+}
+.falla{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: red;
+}
+.check-exito, .icon-falla{
+    font-size: 27px;
+    color: var(--font-white);
+    margin-bottom: 10px;
+}
+.exito p, .falla p{
+    color: var(--font-white);
+    font-size: 16px;
+}
 @media (min-width: 700px){
     body{
         background-size: cover;
@@ -703,6 +719,12 @@ footer p{
     .header .logo img{
         width: 140px;
     }
+    .check-exito, .icon-falla{
+        font-size: 32px;
+    }
+    .exito p, .falla p{
+        font-size: 19px;
+    }
 }
 @media(min-width: 1000px){
     .mapa{
@@ -717,6 +739,7 @@ footer p{
     .margen{
         margin: 0;
     }
+
 }
 @media(min-width: 1100px){
     .mapa{

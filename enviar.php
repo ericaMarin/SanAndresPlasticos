@@ -10,9 +10,9 @@ $mensaje = $_POST['mensaje'];
 $destinatario = "venditti.erica@hotmail.com";
 $asunto = "Contacto desde nuestra web";
 // Datos de la cuenta de correo utilizada para enviar v�a SMTP
-$smtpHost = "mail.tudominio.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "correo@tudominio.com";  // Mi cuenta de correo
-$smtpClave = "123456789";  // Mi contrase�a
+$smtpHost = "mail.sanandresplasticos.com.ar";  // Dominio alternativo brindado en el email de alta 
+$smtpUsuario = "mailing@sanandresplasticos.com.ar";  // Mi cuenta de correo
+$smtpClave = "Mailing1234";  // Mi contrase�a
 
 if (empty($_POST['nombre'] 
 )) {

@@ -7,36 +7,12 @@ $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
-$destinatario = "venditti.erica@hotmail.com";
-$asunto = "Contacto desde nuestra web";
-// Datos de la cuenta de correo utilizada para enviar v�a SMTP
+$destinatario = "mauro@mtcsistemas.com.ar";
+$asunto = "Contacto desde el sitio web";
 $smtpHost = "mail.sanandresplasticos.com.ar";  // Dominio alternativo brindado en el email de alta 
 $smtpUsuario = "mailing@sanandresplasticos.com.ar";  // Mi cuenta de correo
 $smtpClave = "Mailing1234";  // Mi contrase�a
-
-if (empty($_POST['nombre'] 
-)) {
-    echo "El campo nombre está vacío"; 
-  }else {
-    $carta = "De: $nombre \n";      
-  }
-if (empty($_POST['apellido'])) {
-    echo "El campo apellido está vacío"; 
-  }else {
-    $carta .= "Apellido: $apellido \n";    
-  }
-if (empty($_POST['email'])) {
-    echo "El campo email está vacío"; 
-  }else {
-    $carta .= "Email: $email \n";      
-  }
-if (empty($_POST['mensaje'])) {
-    echo "El campo mensaje está vacío"; 
-  }else {
-    $carta .= "Mensaje: $mensaje";    
-  }
   
-
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -50,36 +26,23 @@ $mail->Host = $smtpHost;
 $mail->Username = $smtpUsuario; 
 $mail->Password = $smtpClave;
 
-$mail->From = $email; // Email desde donde env�o el correo.
-$mail->FromName = $nombre;
+$mail->From = $smtpUsuario; // Email desde donde env�o el correo.
+$mail->FromName = 'Contacto Web';
 $mail->AddAddress($destinatario); // Esta es la direcci�n a donde enviamos los datos del formulario
 
-$mail->Subject = "Formulario desde el Sitio Web"; // Este es el titulo del email.
-$mensajeHtml = nl2br($mensaje);
+$mail->Subject = $asunto; // Este es el titulo del email.
 
 $mail->Body = "
 <html> 
-
 <body> 
-
 <h1>Recibiste un nuevo mensaje desde el formulario de contacto</h1>
-
 <p>Informacion enviada por el usuario de la web:</p>
-
-<p>nombre: {$nombre}</p>
-
-<p>apellidp: {$apellido}</p>
-
-<p>asunto: {$asunto}</p>
-
-<p>email: {$email}</p>
-
-<p>mensaje: {$mensaje}</p>
-
+<p>Nombre: <strong>{$nombre}</strong></p>
+<p>Apellido: <strong>{$apellido}</strong></p>
+<p>Email: <strong>{$email}</strong></p>
+<p>Mensaje: <strong>{$mensaje}</strong></p>
 </body> 
-
 </html>
-
 <br />"; // Texto del email en formato HTML
 $mail->AltBody = "{$mensaje} \n\n "; // Texto sin formato HTML
 // FIN - VALORES A MODIFICAR //
@@ -87,25 +50,25 @@ $mail->AltBody = "{$mensaje} \n\n "; // Texto sin formato HTML
 
 $mail->SMTPOptions = array(
     'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
+      'verify_peer' => false,
+      'verify_peer_name' => false,
+      'allow_self_signed' => true
     )
 );
 
 $estadoEnvio = $mail->Send(); 
+$respuesta = new stdClass();
 if($estadoEnvio){
-    echo "El correo fue enviado correctamente.";
+    //echo "El correo fue enviado correctamente.";
+    $respuesta->estado = 'OK';
+    $respuesta->mensaje = 'El correo fue enviado correctamente.';
+    echo json_encode($respuesta);
 } else {
-    echo "Ocurrio un error inesperado.";
+    //echo "Ocurrio un error inesperado.";
+    $respuesta->estado = 'KO';
+    $respuesta->mensaje = 'Ocurrio un error inesperado.';
+    echo json_encode($respuesta);
 }
-
-//mensaje 
-//$contenido = "Nombre: " $nombre "\nEmail: " "\nApellido: " $apellido "\nMensaje: " $mensaje "";
-// Datos para el correo
-
-
-
 
 ?>
 

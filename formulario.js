@@ -1,4 +1,4 @@
-// Validaciones del formulario y los mensajes respectivos utilizando la libreria jquery-validator
+                  // Validaciones del formulario y los mensajes respectivos utilizando la libreria jquery-validator
 $(function() {
     $("form[name='formContacto']").validate({
       rules: {
@@ -58,12 +58,12 @@ $(function() {
             },
             error: (e) => {
                 console.log(e);
-                $('.falla').show();
+                $('.falla').show(3000);
+                setTimeout($('.falla').hide(3000), 2000);
             }
             });
         }
       });
-
       /* Metodo el submitiar al formulario y sin serializar el formulario */
     /*$('#formContacto').submit(function(e) {
         e.preventDefault();
@@ -98,3 +98,7 @@ $(function() {
         })
     });*/
   });
+
+  // setTimeout(document.getElementsByClassName('.falla').style.display = "none", 3000);
+// document.getElementsByClassName('.falla').hide(3000);
+//   setTimeout(document.getElementsByClassName('.exito').style.display = "none", 3000);

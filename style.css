@@ -510,6 +510,10 @@ form .button::focus{
     text-align: center;
     background: green;
 }
+.error{
+    font-size: 13px;
+    color: red;
+}
 .falla{
     width: 100%;
     padding: 10px 0;
